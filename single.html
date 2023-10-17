@@ -16,6 +16,29 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" type="text/css" href="css/packages.min.css">
     <link rel="stylesheet" type="text/css" href="css/default.css">
+    <style>
+         .fill img {
+            filter: brightness(70%); /* Ubah persentase kegelapan sesuai kebutuhan Anda */
+        }
+        .social-links {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+.social-links a {
+    display: inline-block; /* Menjadikan tautan sebagai elemen inline blok */
+    margin: 0 10px; /* Menambahkan spasi di antara setiap tautan */
+}
+
+.social-links i {
+    font-size: 24px; /* Menyesuaikan ukuran ikon */
+}
+
+/* Style tambahan (opsional) */
+.social-links a:hover {
+    color: #007bff; /* Warna pada hover */
+}
+
+    </style>
 </head>
 <body class="sticky-menu">
     <div id="loader">
@@ -40,10 +63,10 @@
                             <a href="#Home" class="order_btn">Home</a>
                         </div>
                         <div class="header_ticket">
-                            <a href="#About" class="order_btn">About Us</a>
+                            <a href="#order" class="order_btn">About Us</a>
                         </div>
                         <div class="header_ticket">
-                            <a href="#Contact" class="order_btn">Contact</a>
+                            <a href="" class="order_btn" id="contactLink">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -371,74 +394,67 @@
 
 <script type="text/javascript" src="js/google-maps.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-    <footer id="footer">
-        <div class="container footer-container">
-            <div class="row">
-                <div class="col-md-2 col-sm-6">
-                    <div class="widget">
-                        <h5 class="widget-title">Menu</h5>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Coming soon</a></li>
-                            <li><a href="#">Order</a></li>
-                            <li><a href="#">Terms of service</a></li>
-                            <li><a href="#">Pricing</a></li>
-                        </ul>
-                    </div>
-                    <div class="widget">
-                        <div class="social-links">
-                            <a href="javascript:;"><i class="fa fa-facebook"></i></a>
-                            <a href="javascript:;"><i class="fa fa-twitter"></i></a>
-                            <a href="javascript:;"><i class="fa fa-google-plus"></i></a>
-                        </div>
-                    </div>
+<footer id="footer">
+    <div class="container footer-container">
+        <div class="row">
+            <div class="col-md-2 col-sm-6">
+                <div class="widget">
+                    <h5 class="widget-title">Menu</h5>
+                    <ul class="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Coming soon</a></li>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h5 class="widget-title">Address information</h5>
-                        <p>
-                            California. AMC Dine-In Theatres Marina,
-                            Street 26, Distritc 543 #108
-                         </p> 
-                         <p>
-                            <i class="fa fa-mail"></i>Example@mail.com<br>
-                            <i class="fa fa-phone"></i> + 123 456 7890
-                         </p> 
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h5 class="widget-title">Informasi Alamat</h5>
+                    <p>
+                        Magelang. Jawa Tengah
+                        Indonesia
+                    </p>
+                    <p>
+                        <i class="fa fa-mail"></i>belikan@gmail.com<br>
+                        <i class="fa fa-phone"></i> +62 8570011 8494
+                    </p>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-6">
-                    <div class="widget">
-                    <h5 class="widget-title">Leave a message</h5>
-                        <form class="contact_form transparent">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <input type="text" class="inputValidation" name="name" placeholder="Name *">
-                                </div>
-                                <div class="col-sm-12">
-                                    <input type="text" class="inputValidation" name="email" placeholder="Email *">
-                                </div>
-                                <div class="col-sm-12 ">
-                                    <textarea class="inputValidation" placeholder="Message *"></textarea>
-                                    <button type="submit" class="button fill rectangle">Send to us</button>
-                                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <div class="widget">
+                    <h5 class="widget-title">Tinggalkan Pesan</h5>
+                    <form class="contact_form transparent">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" class="inputValidation" name="name" placeholder="Nama *">
                             </div>
-                        </form>
-                        <div class="errorMessage"></div>
-                    </div>
+                            <div class="col-sm-12">
+                                <input type="text" class="inputValidation" name="email" placeholder="Email *">
+                            </div>
+                            <div class="col-sm-12 ">
+                                <textarea class="inputValidation" placeholder="Pesan *"></textarea>
+                                <button type="submit" class="button fill rectangle">Kirim ke Kami</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="errorMessage"></div>
                 </div>
             </div>
         </div>
-        <div class="sub-footer">
-            <div class="container">
-                <div class="row copyright-text">
-                    <div class="col-sm-12 text-center">
-                        <p class="mv3 mvt0">&copy; Copyrights 2023 ACTI. All rights reserved</p>
-                    </div>
+    </div>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row copyright-text">
+                <div class="col-sm-12 text-center">
+                    <p class="mv3 mvt0">&copy; Copyrights 2023 ACTI. All rights reserved</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     </div>
     <!-- Overlay Search -->
     <div id="overlay-search">
@@ -453,64 +469,22 @@
     <div id="order">
         <div class="container">
             <div class="row order-content">
-                <div class="col-sm-8 col-xs-12 seat_content ph0">
-                    <h2>order a ticket</h2>
+                    <h2>about us</h2>
                     <div class="entry-order-content">
-                        <form id="msform" name="msform">
                             <!-- fieldsets -->
                             <fieldset>
-                                 <div class="wpc-content">
-                                    <h3>location</h3>
-                                    <select name="location">
-                                        <option>Tenguu Cinema Tysons corner</option>
-                                        <option>Tenguu Cinema </option>
-                                        <option>Tenguu Cinema corner</option>
-                                        <option>Tenguu Cinema Tysons</option>
-                                    </select>
-                                    <h3 class="mt3">Movie</h3>
-                                    <select>
-                                        <option>Dead pool</option>
-                                        <option>THE BATTLE OF ALGIERS (DI ALGERI)</option>
-                                        <option>LORD OF THE RINGS: THE RETURN OF THE KINGS</option>
-                                        <option>Tenguu Cinema Tysons corner</option>
-                                    </select>
-                                    <h3 class="mt3">Date</h3>
-                                    <input type='date' class="datetime"/>
-                                    <h3 class="mt3">TIME</h3>
-                                    <ul class="order-date">
-                                        <li><a href="javascript:;"><i>11:50</i></a></li>
-                                        <li><a href="javascript:;"><i>13:40</i></a></li>
-                                        <li><a href="javascript:;"><i>16:35</i></a></li>
-                                        <li><a href="javascript:;"><i>17:30</i></a></li>
-                                        <li><a href="javascript:;"><i>19:50</i></a></li>
-                                        <li><a href="javascript:;"><i>21:10</i></a></li>
-                                    </ul>
-                                </div>
-                                <input type="button" name="next" class="next action-button" value="Next" />
-                            </fieldset>
-                            <fieldset class="seat-content">
-                                <div class="wpc-content">
-                                    <h3 class="seat_title">seat</h3>
-                                    <div id="seat-map"></div>
-                                    <div id="legend"></div>
-                                </div>
-                                <input type="button" name="previous" class="action-button previous" value="Previous" />
-                                <input type="submit" name="submit" class="submit action-button" value="Submit" />
-                            </fieldset>
-                        </form>
+                                <div class="wpc-content"> 
+                                    <center><img src="images/logo-dark.png" width="35%"><center>
+                                    <h3> The Best App for Film Lovers in Indonesia! Entertainment platform for ordering films from cinemas is an option</h3>
+                                </div>	
+                        <div class="widget" style="width:70% ; height: 30%;">
+                            <div class="social-links">
+                                <a href="javascript:;"><i class="fa fa-facebook"></i></a>
+                                <a href="javascript:;"><i class="fa fa-twitter"></i></a>
+                                <a href="javascript:;"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4 col-xs-12 order_sidebar ph0">
-                    <h2>Your Information</h2>
-                    <div class="order-details">
-                        <span> Location:</span><p id="locationp">Tenguu Cinema Tysons corner</p>
-                        <span>Time:</span>  <p>2016.3.8 18:30</p>
-                        <span>Seat: </span>
-                        <ul id="selected-seats"></ul>
-                        <div>Tickets: <span id="counter">0</span></div>
-                        <div>Total: <b>$<span id="total">0</span></b></div>
-                    </div>
-                    <a href="javascript:;" class="close-window"><i class="fa fa-times"></i></a>
                 </div>
             </div>
         </div>
@@ -520,7 +494,20 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/packages.min.js"></script>
     <script type="text/javascript" src="js/scripts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- jQuery easing plugin -->
+<script>
+    // jQuery document ready function
+    $(document).ready(function() {
+        // Smooth scroll to the footer when clicking the "Contact" link
+        $("#contactLink").on("click", function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $("#footer").offset().top
+            }, 800);
+        });
+    });
+</script>
 </body>
 
 </html>
